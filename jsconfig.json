@@ -12,6 +12,7 @@
             "services/*": ["src/services/*"],
             "styles/*": ["src/styles/*"],
             "utils/*": ["src/utils/*"],
+            "layouts/*": ["src/layouts/*"],
         }
     }
 }

@@ -5,6 +5,7 @@ const paths = [
   "assets",
   "constants",
   "components",
+  "layots",
   "configs",
   "pages",
   "router",

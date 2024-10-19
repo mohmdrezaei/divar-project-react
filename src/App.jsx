@@ -1,16 +1,18 @@
-import PageNotFound from "pages/404";
-import AdminPage from "pages/AdminPage";
-import AuthPage from "pages/AuthPage";
-import DashboardPage from "pages/DashboardPage";
-import HomePage from "pages/HomePage";
 import { BrowserRouter } from "react-router-dom";
 import Router from "router/Router";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import defaultOptions from "configs/reactQuery";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 function App() {
+  const queryClient = new QueryClient({ defaultOptions });
   return (
-    <BrowserRouter>
-      <Router />
-    </BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+      <ReactQueryDevtools />
+    </QueryClientProvider>
   );
 }
 
